@@ -1,6 +1,16 @@
+### Custom ###
+.conf-secret/
 
-# Created by https://www.gitignore.io/api/linux,macos,python,django,pycharm
-# Edit at https://www.gitignore.io/?templates=linux,macos,python,django,pycharm
+
+# Created by https://www.gitignore.io/api/code,linux,macos,python,django,pycharm
+# Edit at https://www.gitignore.io/?templates=code,linux,macos,python,django,pycharm
+
+### Code ###
+# Visual Studio Code - https://code.visualstudio.com/
+.settings/
+.vscode/
+tsconfig.json
+jsconfig.json
 
 ### Django ###
 *.log
@@ -312,4 +322,4 @@ fabric.properties
 pyvenv.cfg
 pip-selfcheck.json
 
-# End of https://www.gitignore.io/api/linux,macos,python,django,pycharm
+# End of https://www.gitignore.io/api/code,linux,macos,python,django,pycharm
