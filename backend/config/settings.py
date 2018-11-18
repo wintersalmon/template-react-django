@@ -17,6 +17,7 @@ DEBUG = True
 # base DIRS
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ROOT_DIR = os.path.dirname(BASE_DIR)
+FRONT_ROOT_DIR = os.path.join(ROOT_DIR, 'frontend')
 
 # conf file DIRS
 CONF_DIR = os.path.join(ROOT_DIR, '.conf-secret')
@@ -61,7 +62,9 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(FRONT_ROOT_DIR, 'build'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -121,3 +124,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+  os.path.join(FRONT_ROOT_DIR, 'build/static'),
+]
